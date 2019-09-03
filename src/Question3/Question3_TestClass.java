@@ -432,4 +432,199 @@ public class Question3_TestClass {
 				driver.close();
 				objWrkBook.close();
 	}
+	
+	@Test(priority=9)
+	public void EmailAddressValidation_True() throws Exception {
+		//FileRead object creating
+		FileInputStream objFileStram = new FileInputStream(objFile);
+			    
+		//Create a execl workbook object
+		XSSFWorkbook objWrkBook = new XSSFWorkbook(objFileStram);
+				
+		//Select Sheet form execl
+		XSSFSheet objWrkBookSheet = objWrkBook.getSheetAt(2);
+		
+		System.setProperty("webdriver.chrome.driver", ChromeDriverPath);
+		driver = new ChromeDriver();
+		driver.get(bassurl);
+		Thread.sleep(4000);
+		
+		//Define variable
+		
+		String firstName = null;
+		String lastName = null;		
+				
+		       
+				firstName=objWrkBookSheet.getRow(8).getCell(0).getStringCellValue();
+				System.out.println(firstName);
+		     
+				lastName=objWrkBookSheet.getRow(8).getCell(1).getStringCellValue();
+				System.out.println(lastName);
+		       
+	
+		        driver.findElement(By.xpath("//*[@id=\"regForm\"]/div[1]/p[1]/input")).sendKeys(firstName);
+				Thread.sleep(1000);
+			
+
+					driver.findElement(By.xpath("//*[@id=\"regForm\"]/div[1]/p[2]/input")).sendKeys(lastName);
+					Thread.sleep(1000);
+
+				driver.findElement(By.xpath("//*[@id=\"regForm\"]/div[1]/p[3]/input[1]")).click();
+				Thread.sleep(2000);
+				
+				driver.findElement(By.xpath("//*[@id=\"nextBtn\"]")).click();
+				Thread.sleep(4000);
+				
+				//Validating email address format
+				
+				String email1 =null;
+				email1= objWrkBookSheet.getRow(8).getCell(2).getStringCellValue();
+				
+				if(email1==null) {
+					
+					System.out.println("Error massage : Email address not added");
+				}
+				else {
+					driver.findElement(By.xpath("//*[@id=\"regForm\"]/div[2]/p[1]/input")).sendKeys(email1);
+					Thread.sleep(1000);
+				}
+				
+				  String EMAIL_REGEX = "^[\\w-_\\.+]*[\\w-_\\.]\\@([\\w]+\\.)+[\\w]+[\\w]$";			      
+			      Boolean b = email1.matches(EMAIL_REGEX);
+			      System.out.println("is e-mail: "+email1+" :Email Validation = " + b);
+			     
+			     
+			      
+				driver.close();
+				objWrkBook.close();
+	}
+	
+	@Test(priority=10)
+	public void EmailAddressValidation_False() throws Exception {
+		//FileRead object creating
+		FileInputStream objFileStram = new FileInputStream(objFile);
+			    
+		//Create a execl workbook object
+		XSSFWorkbook objWrkBook = new XSSFWorkbook(objFileStram);
+				
+		//Select Sheet form execl
+		XSSFSheet objWrkBookSheet = objWrkBook.getSheetAt(2);
+		
+		System.setProperty("webdriver.chrome.driver", ChromeDriverPath);
+		driver = new ChromeDriver();
+		driver.get(bassurl);
+		Thread.sleep(4000);
+		
+		//Define variable
+		
+		String firstName = null;
+		String lastName = null;		
+				
+		       
+				firstName=objWrkBookSheet.getRow(9).getCell(0).getStringCellValue();
+				System.out.println(firstName);
+		     
+				lastName=objWrkBookSheet.getRow(9).getCell(1).getStringCellValue();
+				System.out.println(lastName);
+		       
+	
+		        driver.findElement(By.xpath("//*[@id=\"regForm\"]/div[1]/p[1]/input")).sendKeys(firstName);
+				Thread.sleep(1000);
+			
+
+					driver.findElement(By.xpath("//*[@id=\"regForm\"]/div[1]/p[2]/input")).sendKeys(lastName);
+					Thread.sleep(1000);
+
+				driver.findElement(By.xpath("//*[@id=\"regForm\"]/div[1]/p[3]/input[1]")).click();
+				Thread.sleep(2000);
+				
+				driver.findElement(By.xpath("//*[@id=\"nextBtn\"]")).click();
+				Thread.sleep(4000);
+				
+				//Validating email address format
+				
+				String email1 =null;
+				email1= objWrkBookSheet.getRow(9).getCell(2).getStringCellValue();
+				
+				if(email1==null) {
+					
+					System.out.println("Error massage : Email address not added");
+				}
+				else {
+					driver.findElement(By.xpath("//*[@id=\"regForm\"]/div[2]/p[1]/input")).sendKeys(email1);
+					Thread.sleep(1000);
+				}
+				
+				  String EMAIL_REGEX = "^[\\w-_\\.+]*[\\w-_\\.]\\@([\\w]+\\.)+[\\w]+[\\w]$";			      
+			      Boolean b = email1.matches(EMAIL_REGEX);
+			      System.out.println("is e-mail: "+email1+" :Email Validation = " + b);
+			     			      
+				driver.close();
+				objWrkBook.close();
+	}
+	
+	@Test(priority=11)
+	public void Empty_EmailAddress() throws Exception {
+		//FileRead object creating
+		FileInputStream objFileStram = new FileInputStream(objFile);
+			    
+		//Create a execl workbook object
+		XSSFWorkbook objWrkBook = new XSSFWorkbook(objFileStram);
+				
+		//Select Sheet form execl
+		XSSFSheet objWrkBookSheet = objWrkBook.getSheetAt(2);
+		
+		System.setProperty("webdriver.chrome.driver", ChromeDriverPath);
+		driver = new ChromeDriver();
+		driver.get(bassurl);
+		Thread.sleep(4000);
+		
+		//Define variable
+		
+		String firstName = null;
+		String lastName = null;		
+				
+		       
+				firstName=objWrkBookSheet.getRow(10).getCell(0).getStringCellValue();
+				System.out.println(firstName);
+		     
+				lastName=objWrkBookSheet.getRow(10).getCell(1).getStringCellValue();
+				System.out.println(lastName);
+		       
+	
+		        driver.findElement(By.xpath("//*[@id=\"regForm\"]/div[1]/p[1]/input")).sendKeys(firstName);
+				Thread.sleep(1000);
+			
+
+					driver.findElement(By.xpath("//*[@id=\"regForm\"]/div[1]/p[2]/input")).sendKeys(lastName);
+					Thread.sleep(1000);
+
+				driver.findElement(By.xpath("//*[@id=\"regForm\"]/div[1]/p[3]/input[1]")).click();
+				Thread.sleep(2000);
+				
+				driver.findElement(By.xpath("//*[@id=\"nextBtn\"]")).click();
+				Thread.sleep(4000);
+				
+				//Validating email address format
+				
+				String email1 =null;
+				try {
+				email1= objWrkBookSheet.getRow(10).getCell(2).getStringCellValue();
+				driver.findElement(By.xpath("//*[@id=\"regForm\"]/div[2]/p[1]/input")).sendKeys(email1);
+				Thread.sleep(1000);
+				
+				String EMAIL_REGEX = "^[\\w-_\\.+]*[\\w-_\\.]\\@([\\w]+\\.)+[\\w]+[\\w]$";			      
+			      Boolean b = email1.matches(EMAIL_REGEX);
+			      System.out.println("is e-mail: "+email1+" :Email Validation = " + b);
+			      }
+				catch (Exception e) {
+					System.out.println("Error massage : Email address is Empty");
+			     	}
+				
+								
+				  
+			     			      
+				driver.close();
+				objWrkBook.close();
+	}
 }
