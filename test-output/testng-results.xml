@@ -1,44 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="8" passed="8">
+<testng-results skipped="0" failed="0" ignored="10" total="11" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="84324" started-at="2019-08-31T13:16:16Z" finished-at="2019-08-31T13:17:41Z">
+  <suite name="Default suite" duration-ms="16445" started-at="2019-09-03T06:29:44Z" finished-at="2019-09-03T06:30:00Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="84324" started-at="2019-08-31T13:16:16Z" finished-at="2019-08-31T13:17:41Z">
+    <test name="Default test" duration-ms="16445" started-at="2019-09-03T06:29:44Z" finished-at="2019-09-03T06:30:00Z">
       <class name="Question3.Question3_TestClass">
-        <test-method status="PASS" signature="loadLogin()[pri:1, instance:Question3.Question3_TestClass@26653222]" name="loadLogin" duration-ms="7435" started-at="2019-08-31T13:16:16Z" finished-at="2019-08-31T13:16:24Z">
+        <test-method status="PASS" signature="Empty_EmailAddress()[pri:11, instance:Question3.Question3_TestClass@59f99ea]" name="Empty_EmailAddress" duration-ms="16421" started-at="2019-09-03T06:29:44Z" finished-at="2019-09-03T06:30:00Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- loadLogin -->
-        <test-method status="PASS" signature="emptyFirstNameValidation()[pri:2, instance:Question3.Question3_TestClass@26653222]" name="emptyFirstNameValidation" duration-ms="10717" started-at="2019-08-31T13:16:24Z" finished-at="2019-08-31T13:16:34Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- emptyFirstNameValidation -->
-        <test-method status="PASS" signature="emptyLastNameValidation()[pri:3, instance:Question3.Question3_TestClass@26653222]" name="emptyLastNameValidation" duration-ms="10173" started-at="2019-08-31T13:16:34Z" finished-at="2019-08-31T13:16:45Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- emptyLastNameValidation -->
-        <test-method status="PASS" signature="FirstNameLengthValidation()[pri:4, instance:Question3.Question3_TestClass@26653222]" name="FirstNameLengthValidation" duration-ms="10108" started-at="2019-08-31T13:16:45Z" finished-at="2019-08-31T13:16:55Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- FirstNameLengthValidation -->
-        <test-method status="PASS" signature="LastNameLengthValidation()[pri:5, instance:Question3.Question3_TestClass@26653222]" name="LastNameLengthValidation" duration-ms="10085" started-at="2019-08-31T13:16:55Z" finished-at="2019-08-31T13:17:05Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- LastNameLengthValidation -->
-        <test-method status="PASS" signature="invaliedFirstNameValidation()[pri:6, instance:Question3.Question3_TestClass@26653222]" name="invaliedFirstNameValidation" duration-ms="10201" started-at="2019-08-31T13:17:05Z" finished-at="2019-08-31T13:17:15Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- invaliedFirstNameValidation -->
-        <test-method status="PASS" signature="invaliedLastNameValidation()[pri:7, instance:Question3.Question3_TestClass@26653222]" name="invaliedLastNameValidation" duration-ms="10140" started-at="2019-08-31T13:17:15Z" finished-at="2019-08-31T13:17:25Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- invaliedLastNameValidation -->
-        <test-method status="PASS" signature="LoadContactDetailsPage()[pri:8, instance:Question3.Question3_TestClass@26653222]" name="LoadContactDetailsPage" duration-ms="15416" started-at="2019-08-31T13:17:25Z" finished-at="2019-08-31T13:17:41Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- LoadContactDetailsPage -->
+        </test-method> <!-- Empty_EmailAddress -->
       </class> <!-- Question3.Question3_TestClass -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
