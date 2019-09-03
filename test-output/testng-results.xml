@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="10" total="11" passed="1">
+<testng-results skipped="0" failed="0" ignored="13" total="14" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="16445" started-at="2019-09-03T06:29:44Z" finished-at="2019-09-03T06:30:00Z">
+  <suite name="Default suite" duration-ms="18306" started-at="2019-09-03T13:12:33Z" finished-at="2019-09-03T13:12:51Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="16445" started-at="2019-09-03T06:29:44Z" finished-at="2019-09-03T06:30:00Z">
+    <test name="Default test" duration-ms="18306" started-at="2019-09-03T13:12:33Z" finished-at="2019-09-03T13:12:51Z">
       <class name="Question3.Question3_TestClass">
-        <test-method status="PASS" signature="Empty_EmailAddress()[pri:11, instance:Question3.Question3_TestClass@59f99ea]" name="Empty_EmailAddress" duration-ms="16421" started-at="2019-09-03T06:29:44Z" finished-at="2019-09-03T06:30:00Z">
+        <test-method status="PASS" signature="Empty_MobileNumber()[pri:14, instance:Question3.Question3_TestClass@59f99ea]" name="Empty_MobileNumber" duration-ms="18279" started-at="2019-09-03T13:12:33Z" finished-at="2019-09-03T13:12:51Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Empty_EmailAddress -->
+        </test-method> <!-- Empty_MobileNumber -->
       </class> <!-- Question3.Question3_TestClass -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
