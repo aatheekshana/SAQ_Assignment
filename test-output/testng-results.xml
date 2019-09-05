@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="13" total="14" passed="1">
+<testng-results skipped="0" failed="0" ignored="14" total="15" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="18306" started-at="2019-09-03T13:12:33Z" finished-at="2019-09-03T13:12:51Z">
+  <suite name="Default suite" duration-ms="25871" started-at="2019-09-04T18:20:57Z" finished-at="2019-09-04T18:21:23Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="18306" started-at="2019-09-03T13:12:33Z" finished-at="2019-09-03T13:12:51Z">
+    <test name="Default test" duration-ms="25871" started-at="2019-09-04T18:20:57Z" finished-at="2019-09-04T18:21:23Z">
       <class name="Question3.Question3_TestClass">
-        <test-method status="PASS" signature="Empty_MobileNumber()[pri:14, instance:Question3.Question3_TestClass@59f99ea]" name="Empty_MobileNumber" duration-ms="18279" started-at="2019-09-03T13:12:33Z" finished-at="2019-09-03T13:12:51Z">
+        <test-method status="PASS" signature="AddAllContactData()[pri:14, instance:Question3.Question3_TestClass@59f99ea]" name="AddAllContactData" duration-ms="25853" started-at="2019-09-04T18:20:57Z" finished-at="2019-09-04T18:21:23Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Empty_MobileNumber -->
+        </test-method> <!-- AddAllContactData -->
       </class> <!-- Question3.Question3_TestClass -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
