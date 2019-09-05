@@ -1,16 +1,84 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="14" total="15" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="18" passed="18">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="25871" started-at="2019-09-04T18:20:57Z" finished-at="2019-09-04T18:21:23Z">
+  <suite name="Default suite" duration-ms="282922" started-at="2019-09-05T13:17:11Z" finished-at="2019-09-05T13:21:54Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="25871" started-at="2019-09-04T18:20:57Z" finished-at="2019-09-04T18:21:23Z">
+    <test name="Default test" duration-ms="282922" started-at="2019-09-05T13:17:11Z" finished-at="2019-09-05T13:21:54Z">
       <class name="Question3.Question3_TestClass">
-        <test-method status="PASS" signature="AddAllContactData()[pri:14, instance:Question3.Question3_TestClass@59f99ea]" name="AddAllContactData" duration-ms="25853" started-at="2019-09-04T18:20:57Z" finished-at="2019-09-04T18:21:23Z">
+        <test-method status="PASS" signature="loadLogin()[pri:1, instance:Question3.Question3_TestClass@26653222]" name="loadLogin" duration-ms="7625" started-at="2019-09-05T13:17:11Z" finished-at="2019-09-05T13:17:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loadLogin -->
+        <test-method status="PASS" signature="emptyFirstNameValidation()[pri:2, instance:Question3.Question3_TestClass@26653222]" name="emptyFirstNameValidation" duration-ms="11011" started-at="2019-09-05T13:17:19Z" finished-at="2019-09-05T13:17:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- emptyFirstNameValidation -->
+        <test-method status="PASS" signature="emptyLastNameValidation()[pri:3, instance:Question3.Question3_TestClass@26653222]" name="emptyLastNameValidation" duration-ms="10647" started-at="2019-09-05T13:17:30Z" finished-at="2019-09-05T13:17:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- emptyLastNameValidation -->
+        <test-method status="PASS" signature="FirstNameLengthValidation()[pri:4, instance:Question3.Question3_TestClass@26653222]" name="FirstNameLengthValidation" duration-ms="10287" started-at="2019-09-05T13:17:41Z" finished-at="2019-09-05T13:17:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- FirstNameLengthValidation -->
+        <test-method status="PASS" signature="LastNameLengthValidation()[pri:5, instance:Question3.Question3_TestClass@26653222]" name="LastNameLengthValidation" duration-ms="10175" started-at="2019-09-05T13:17:51Z" finished-at="2019-09-05T13:18:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LastNameLengthValidation -->
+        <test-method status="PASS" signature="invaliedFirstNameValidation()[pri:6, instance:Question3.Question3_TestClass@26653222]" name="invaliedFirstNameValidation" duration-ms="10621" started-at="2019-09-05T13:18:01Z" finished-at="2019-09-05T13:18:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- invaliedFirstNameValidation -->
+        <test-method status="PASS" signature="invaliedLastNameValidation()[pri:7, instance:Question3.Question3_TestClass@26653222]" name="invaliedLastNameValidation" duration-ms="10183" started-at="2019-09-05T13:18:12Z" finished-at="2019-09-05T13:18:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- invaliedLastNameValidation -->
+        <test-method status="PASS" signature="LoadContactDetailsPage()[pri:8, instance:Question3.Question3_TestClass@26653222]" name="LoadContactDetailsPage" duration-ms="15545" started-at="2019-09-05T13:18:22Z" finished-at="2019-09-05T13:18:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoadContactDetailsPage -->
+        <test-method status="PASS" signature="EmailAddressValidation_True()[pri:9, instance:Question3.Question3_TestClass@26653222]" name="EmailAddressValidation_True" duration-ms="18954" started-at="2019-09-05T13:18:37Z" finished-at="2019-09-05T13:18:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- EmailAddressValidation_True -->
+        <test-method status="PASS" signature="EmailAddressValidation_False()[pri:10, instance:Question3.Question3_TestClass@26653222]" name="EmailAddressValidation_False" duration-ms="16571" started-at="2019-09-05T13:18:56Z" finished-at="2019-09-05T13:19:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- EmailAddressValidation_False -->
+        <test-method status="PASS" signature="Empty_EmailAddress()[pri:11, instance:Question3.Question3_TestClass@26653222]" name="Empty_EmailAddress" duration-ms="15426" started-at="2019-09-05T13:19:13Z" finished-at="2019-09-05T13:19:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Empty_EmailAddress -->
+        <test-method status="PASS" signature="MobileNumberValidation()[pri:12, instance:Question3.Question3_TestClass@26653222]" name="MobileNumberValidation" duration-ms="17794" started-at="2019-09-05T13:19:28Z" finished-at="2019-09-05T13:19:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- MobileNumberValidation -->
+        <test-method status="PASS" signature="MobileNumberValidation_False()[pri:13, instance:Question3.Question3_TestClass@26653222]" name="MobileNumberValidation_False" duration-ms="17691" started-at="2019-09-05T13:19:46Z" finished-at="2019-09-05T13:20:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- MobileNumberValidation_False -->
+        <test-method status="PASS" signature="AddAllContactData()[pri:14, instance:Question3.Question3_TestClass@26653222]" name="AddAllContactData" duration-ms="21712" started-at="2019-09-05T13:20:04Z" finished-at="2019-09-05T13:20:26Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AddAllContactData -->
+        <test-method status="PASS" signature="Empty_MobileNumber()[pri:14, instance:Question3.Question3_TestClass@26653222]" name="Empty_MobileNumber" duration-ms="16564" started-at="2019-09-05T13:20:26Z" finished-at="2019-09-05T13:20:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Empty_MobileNumber -->
+        <test-method status="PASS" signature="EmptyData_Month_Year()[pri:15, instance:Question3.Question3_TestClass@26653222]" name="EmptyData_Month_Year" duration-ms="21685" started-at="2019-09-05T13:20:42Z" finished-at="2019-09-05T13:21:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- EmptyData_Month_Year -->
+        <test-method status="PASS" signature="Invalid_Date_Month_Year()[pri:16, instance:Question3.Question3_TestClass@26653222]" name="Invalid_Date_Month_Year" duration-ms="25240" started-at="2019-09-05T13:21:04Z" finished-at="2019-09-05T13:21:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Invalid_Date_Month_Year -->
+        <test-method status="PASS" signature="ValidateYear()[pri:17, instance:Question3.Question3_TestClass@26653222]" name="ValidateYear" duration-ms="25094" started-at="2019-09-05T13:21:29Z" finished-at="2019-09-05T13:21:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ValidateYear -->
       </class> <!-- Question3.Question3_TestClass -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->

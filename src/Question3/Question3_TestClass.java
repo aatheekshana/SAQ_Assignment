@@ -937,4 +937,360 @@ public class Question3_TestClass {
 				driver.close();
 				objWrkBook.close();
 	}
+	
+	@Test(priority=15)
+	public void EmptyData_Month_Year() throws Exception {
+		//FileRead object creating
+		FileInputStream objFileStram = new FileInputStream(objFile);
+			    
+		//Create a execl workbook object
+		XSSFWorkbook objWrkBook = new XSSFWorkbook(objFileStram);
+				
+		//Select Sheet form execl
+		XSSFSheet objWrkBookSheet = objWrkBook.getSheetAt(2);
+		
+		System.setProperty("webdriver.chrome.driver", ChromeDriverPath);
+		driver = new ChromeDriver();
+		driver.get(bassurl);
+		Thread.sleep(4000);
+		
+		//Define variable
+		
+		String firstName = null;
+		String lastName = null;		
+				
+		       
+				firstName=objWrkBookSheet.getRow(15).getCell(0).getStringCellValue();
+				System.out.println(firstName);
+		     
+				lastName=objWrkBookSheet.getRow(15).getCell(1).getStringCellValue();
+				System.out.println(lastName);
+		       
+	
+		        driver.findElement(By.xpath("//*[@id=\"regForm\"]/div[1]/p[1]/input")).sendKeys(firstName);
+				Thread.sleep(1000);
+			
+
+				driver.findElement(By.xpath("//*[@id=\"regForm\"]/div[1]/p[2]/input")).sendKeys(lastName);
+				Thread.sleep(1000);
+
+				driver.findElement(By.xpath("//*[@id=\"regForm\"]/div[1]/p[3]/input[1]")).click();
+				Thread.sleep(2000);
+				
+				driver.findElement(By.xpath("//*[@id=\"nextBtn\"]")).click();
+				Thread.sleep(4000);
+				
+				//Validating email address format
+				
+				String email1 =null;
+				try {
+				email1= objWrkBookSheet.getRow(15).getCell(2).getStringCellValue();
+				driver.findElement(By.xpath("//*[@id=\"regForm\"]/div[2]/p[1]/input")).sendKeys(email1);
+				Thread.sleep(1000);
+				
+				String EMAIL_REGEX = "^[\\w-_\\.+]*[\\w-_\\.]\\@([\\w]+\\.)+[\\w]+[\\w]$";			      
+			      Boolean b = email1.matches(EMAIL_REGEX);
+			      }
+				catch (Exception e) {
+					System.out.println("Error massage : Email address is Empty");
+			     	}
+				
+					
+				String mobile =null;
+				
+				try {
+					mobile= objWrkBookSheet.getRow(15).getCell(3).getRawValue();
+				System.out.println(mobile);
+				driver.findElement(By.xpath("//*[@id=\"regForm\"]/div[2]/p[2]/input")).sendKeys(mobile);
+				Thread.sleep(1000);
+				Boolean ph = mobile.matches("\\d{9}");
+				}
+				catch (Exception e){
+					System.out.println("Error massage : Mobile nunber is Empty");
+				}
+			     	
+				
+				driver.findElement(By.xpath("//*[@id=\"nextBtn\"]")).click();
+				Thread.sleep(4000);
+				
+				String date=null;
+				String month=null;
+				String year=null;
+				
+				try {
+					date= objWrkBookSheet.getRow(15).getCell(4).getRawValue();
+				System.out.println(date);
+				driver.findElement(By.xpath("//*[@id=\"regForm\"]/div[3]/p[1]/input")).sendKeys(date);
+				Thread.sleep(1000);
+				Boolean ph = date.matches("\\d{2}");
+				System.out.println("Date : "+date+" :Date validation = " + ph);
+				}
+				catch (Exception e){
+					System.out.println("Error massage : Date is Empty");
+				}							
+				
+				try {
+					month= objWrkBookSheet.getRow(15).getCell(5).getRawValue();
+				System.out.println(date);
+				driver.findElement(By.xpath("//*[@id=\"regForm\"]/div[3]/p[2]/input")).sendKeys(month);
+				Thread.sleep(1000);
+				Boolean ph = month.matches("\\d{1}");
+				System.out.println("Month : "+month+" :Month validation = " + ph);
+				}
+				catch (Exception e){
+					System.out.println("Error massage : Month is Empty");
+				}
+				
+				try {
+					year= objWrkBookSheet.getRow(15).getCell(6).getRawValue();
+				System.out.println(year);
+				driver.findElement(By.xpath("//*[@id=\"regForm\"]/div[3]/p[3]/input")).sendKeys(year);
+				Thread.sleep(1000);
+				Boolean ph = year.matches("\\d{4}");
+				System.out.println("Year : "+year+" :Month validation = " + ph);
+				}
+				catch (Exception e){
+					System.out.println("Error massage : Month is Empty");
+				}					
+				
+				driver.close();
+				objWrkBook.close();
+	}
+	
+	@Test(priority=16)
+	public void Invalid_Date_Month_Year() throws Exception {
+		//FileRead object creating
+		FileInputStream objFileStram = new FileInputStream(objFile);
+			    
+		//Create a execl workbook object
+		XSSFWorkbook objWrkBook = new XSSFWorkbook(objFileStram);
+				
+		//Select Sheet form execl
+		XSSFSheet objWrkBookSheet = objWrkBook.getSheetAt(2);
+		
+		System.setProperty("webdriver.chrome.driver", ChromeDriverPath);
+		driver = new ChromeDriver();
+		driver.get(bassurl);
+		Thread.sleep(4000);
+		
+		//Define variable
+		
+		String firstName = null;
+		String lastName = null;		
+				
+		       
+				firstName=objWrkBookSheet.getRow(16).getCell(0).getStringCellValue();
+				System.out.println(firstName);
+		     
+				lastName=objWrkBookSheet.getRow(16).getCell(1).getStringCellValue();
+				System.out.println(lastName);
+		       
+	
+		        driver.findElement(By.xpath("//*[@id=\"regForm\"]/div[1]/p[1]/input")).sendKeys(firstName);
+				Thread.sleep(1000);
+			
+
+				driver.findElement(By.xpath("//*[@id=\"regForm\"]/div[1]/p[2]/input")).sendKeys(lastName);
+				Thread.sleep(1000);
+
+				driver.findElement(By.xpath("//*[@id=\"regForm\"]/div[1]/p[3]/input[1]")).click();
+				Thread.sleep(2000);
+				
+				driver.findElement(By.xpath("//*[@id=\"nextBtn\"]")).click();
+				Thread.sleep(4000);
+				
+				//Validating email address format
+				
+				String email1 =null;
+				try {
+				email1= objWrkBookSheet.getRow(16).getCell(2).getStringCellValue();
+				driver.findElement(By.xpath("//*[@id=\"regForm\"]/div[2]/p[1]/input")).sendKeys(email1);
+				Thread.sleep(1000);
+				
+				String EMAIL_REGEX = "^[\\w-_\\.+]*[\\w-_\\.]\\@([\\w]+\\.)+[\\w]+[\\w]$";			      
+			      Boolean b = email1.matches(EMAIL_REGEX);
+			      }
+				catch (Exception e) {
+					System.out.println("Error massage : Email address is Empty");
+			     	}
+				
+					
+				String mobile =null;
+				
+				try {
+					mobile= objWrkBookSheet.getRow(16).getCell(3).getRawValue();
+				System.out.println(mobile);
+				driver.findElement(By.xpath("//*[@id=\"regForm\"]/div[2]/p[2]/input")).sendKeys(mobile);
+				Thread.sleep(1000);
+				Boolean ph = mobile.matches("\\d{9}");
+				}
+				catch (Exception e){
+					System.out.println("Error massage : Mobile nunber is Empty");
+				}
+			     	
+				
+				driver.findElement(By.xpath("//*[@id=\"nextBtn\"]")).click();
+				Thread.sleep(4000);
+				
+				String date=null;
+				String month=null;
+				String year=null;
+				
+				try {
+					date= objWrkBookSheet.getRow(16).getCell(4).getRawValue();
+				System.out.println(date);
+				driver.findElement(By.xpath("//*[@id=\"regForm\"]/div[3]/p[1]/input")).sendKeys(date);
+				Thread.sleep(1000);
+				Boolean ph = date.matches("\\d{2}");
+				System.out.println("Date : "+date+" :Date validation = " + ph);
+				}
+				catch (Exception e){
+					System.out.println(e+"Error massage : Date is Empty");
+				}							
+				
+				try {
+					month= objWrkBookSheet.getRow(16).getCell(5).getRawValue();
+				System.out.println(date);
+				driver.findElement(By.xpath("//*[@id=\"regForm\"]/div[3]/p[2]/input")).sendKeys(month);
+				Thread.sleep(1000);
+				Boolean ph = month.matches("\\d{1}");
+				System.out.println("Month : "+month+" :Month validation = " + ph);
+				}
+				catch (Exception e){
+					System.out.println(e+ "Error massage : Month is Empty");
+				}	
+				
+				try {
+					year= objWrkBookSheet.getRow(16).getCell(6).getRawValue();
+				System.out.println(year);
+				driver.findElement(By.xpath("//*[@id=\"regForm\"]/div[3]/p[3]/input")).sendKeys(year);
+				Thread.sleep(1000);
+				Boolean ph = year.matches("\\d{4}");
+				System.out.println("Year : "+year+" :Month validation = " + ph);
+				}
+				catch (Exception e){
+					System.out.println("Error massage : Month is Empty");
+				}			
+				
+				driver.close();
+				objWrkBook.close();
+	}
+	
+	@Test(priority=17)
+	public void ValidateYear() throws Exception {
+		//FileRead object creating
+		FileInputStream objFileStram = new FileInputStream(objFile);
+			    
+		//Create a execl workbook object
+		XSSFWorkbook objWrkBook = new XSSFWorkbook(objFileStram);
+				
+		//Select Sheet form execl
+		XSSFSheet objWrkBookSheet = objWrkBook.getSheetAt(2);
+		
+		System.setProperty("webdriver.chrome.driver", ChromeDriverPath);
+		driver = new ChromeDriver();
+		driver.get(bassurl);
+		Thread.sleep(4000);
+		
+		//Define variable
+		
+		String firstName = null;
+		String lastName = null;		
+				
+		       
+				firstName=objWrkBookSheet.getRow(17).getCell(0).getStringCellValue();
+				System.out.println(firstName);
+		     
+				lastName=objWrkBookSheet.getRow(17).getCell(1).getStringCellValue();
+				System.out.println(lastName);
+		       
+	
+		        driver.findElement(By.xpath("//*[@id=\"regForm\"]/div[1]/p[1]/input")).sendKeys(firstName);
+				Thread.sleep(1000);
+			
+
+				driver.findElement(By.xpath("//*[@id=\"regForm\"]/div[1]/p[2]/input")).sendKeys(lastName);
+				Thread.sleep(1000);
+
+				driver.findElement(By.xpath("//*[@id=\"regForm\"]/div[1]/p[3]/input[1]")).click();
+				Thread.sleep(2000);
+				
+				driver.findElement(By.xpath("//*[@id=\"nextBtn\"]")).click();
+				Thread.sleep(4000);
+				
+				//Validating email address format
+				
+				String email1 =null;
+				try {
+				email1= objWrkBookSheet.getRow(17).getCell(2).getStringCellValue();
+				driver.findElement(By.xpath("//*[@id=\"regForm\"]/div[2]/p[1]/input")).sendKeys(email1);
+				Thread.sleep(1000);
+				
+				String EMAIL_REGEX = "^[\\w-_\\.+]*[\\w-_\\.]\\@([\\w]+\\.)+[\\w]+[\\w]$";			      
+			      Boolean b = email1.matches(EMAIL_REGEX);
+			      }
+				catch (Exception e) {
+					System.out.println("Error massage : Email address is Empty");
+			     	}
+				
+					
+				String mobile =null;
+				
+				try {
+					mobile= objWrkBookSheet.getRow(17).getCell(3).getRawValue();
+				System.out.println(mobile);
+				driver.findElement(By.xpath("//*[@id=\"regForm\"]/div[2]/p[2]/input")).sendKeys(mobile);
+				Thread.sleep(1000);
+				Boolean ph = mobile.matches("\\d{9}");
+				}
+				catch (Exception e){
+					System.out.println("Error massage : Mobile nunber is Empty");
+				}
+			     	
+				
+				driver.findElement(By.xpath("//*[@id=\"nextBtn\"]")).click();
+				Thread.sleep(4000);
+				
+				String date=null;
+				String month=null;
+				String year=null;
+				
+				try {
+					date= objWrkBookSheet.getRow(17).getCell(4).getRawValue();
+				System.out.println(date);
+				driver.findElement(By.xpath("//*[@id=\"regForm\"]/div[3]/p[1]/input")).sendKeys(date);
+				Thread.sleep(1000);
+				Boolean ph = date.matches("\\d{2}");
+				System.out.println("Date : "+date+" :Date validation = " + ph);
+				}
+				catch (Exception e){
+					System.out.println("Error massage : Date is Empty");
+				}							
+				
+				try {
+					month= objWrkBookSheet.getRow(17).getCell(5).getRawValue();
+				System.out.println(date);
+				driver.findElement(By.xpath("//*[@id=\"regForm\"]/div[3]/p[2]/input")).sendKeys(month);
+				Thread.sleep(1000);
+				Boolean ph = month.matches("\\d{1}");
+				System.out.println("Month : "+month+" :Month validation = " + ph);
+				}
+				catch (Exception e){
+					System.out.println("Error massage : Month is Empty");
+				}
+				
+				try {
+					year= objWrkBookSheet.getRow(17).getCell(6).getRawValue();
+				System.out.println(year);
+				driver.findElement(By.xpath("//*[@id=\"regForm\"]/div[3]/p[3]/input")).sendKeys(year);
+				Thread.sleep(1000);
+				Boolean ph = year.matches("\\d{4}");
+				System.out.println("Year : "+year+" :Month validation = " + ph);
+				}
+				catch (Exception e){
+					System.out.println("Error massage : Month is Empty");
+				}		
+				driver.close();
+				objWrkBook.close();
+	}
 }
