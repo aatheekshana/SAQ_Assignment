@@ -5,7 +5,7 @@
     <classes>
       <class name="Question3.Question3_TestClass">
         <methods>
-          <include name="Empty_EmailAddress"/>
+          <include name="MaxLength_NotExceded_UserName"/>
         </methods>
       </class> <!-- Question3.Question3_TestClass -->
     </classes>
