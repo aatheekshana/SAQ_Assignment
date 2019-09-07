@@ -25,7 +25,7 @@ public class Question2_TestClass {
 	File objFile = new File("D:\\Selenium Project\\AssignmentQuestion\\Assignment_Answers\\ExternalData\\QuestionTestData.xlsx");
 	
 	@Test(priority=1)
-	public void loadLogin() throws Exception {
+	public void Q2_ModalLoginPage_FrontPageLoading() throws Exception {
 		
 		System.setProperty("webdriver.chrome.driver", ChromeDriverPath);
 		driver = new ChromeDriver();
@@ -36,17 +36,20 @@ public class Question2_TestClass {
 	}
 	
 	@Test(priority=2)
-	public void VerifySilentText() throws Exception {
-		
+	public void Q2_ModalLoginPage_VerifySilentTexts() throws Exception {
+		//Set properties for chrome drivers
 		System.setProperty("webdriver.chrome.driver", ChromeDriverPath);
 		driver = new ChromeDriver();
+		
+		//Get bass URL
 		driver.get(bassurl);
 		Thread.sleep(3000);
 		
-		
+		//Click login button
 		WebElement loginPG =driver.findElement(By.xpath("/html/body/button"));
 		loginPG.click();
 		
+		//Get silent text
 		String silentTextFirstName=driver.findElement(By.xpath("//*[@id=\"id01\"]/form/div[2]/input[1]")).getAttribute("placeholder");
 		System.out.println("First Name field silent text : "+ silentTextFirstName);
 		
@@ -57,6 +60,7 @@ public class Question2_TestClass {
 		String ExpectedSilentTextFN = "Enter Username";
 		String ExpectedSilentTextPW = "Enter Password";
 		
+		//Assert silent text
 		try {
 		Assert.assertEquals(silentTextFirstName, ExpectedSilentTextFN);
 		} catch (Throwable e) {
@@ -74,7 +78,7 @@ public class Question2_TestClass {
 	}
 	
 	@Test(priority=3)
-	public void SucessfullyEnterdedAllData() throws Exception {
+	public void Q2_ModalLoginPage_SucessfullyLoginWithAllData() throws Exception {
 		//FileRead object creating
 		FileInputStream objFileStram = new FileInputStream(objFile);
 	    
@@ -133,7 +137,7 @@ public class Question2_TestClass {
 	}
 	
 	@Test(priority=4)
-	public void InvalidUserName() throws Exception {
+	public void Q2_ModalLoginPage_ErrorValidationForInvalidUserName() throws Exception {
 		//FileRead object creating
 		FileInputStream objFileStram = new FileInputStream(objFile);
 	    
@@ -207,7 +211,7 @@ public class Question2_TestClass {
 	
 	
 	@Test(priority=5)
-	public void InvalidPassword() throws Exception {
+	public void Q2_ModalLoginPage_ErrorValidationForInvalidPassword() throws Exception {
 		//FileRead object creating
 		FileInputStream objFileStram = new FileInputStream(objFile);
 	    
@@ -279,7 +283,7 @@ public class Question2_TestClass {
 		
 	}
 	@Test(priority=6)
-	public void VerifyEmptyUserName() throws Exception {
+	public void Q2_ModalLoginPage_ErrorValidationForEmptyUserName() throws Exception {
 		//FileRead object creating
 		FileInputStream objFileStram = new FileInputStream(objFile);
 	    
@@ -341,7 +345,7 @@ public class Question2_TestClass {
 	}
 	
 	@Test(priority=7)
-	public void VerifyEmptyPassword() throws Exception {
+	public void Q2_ModalLoginPage_ErrorValidationForEmptyPassword() throws Exception {
 		//FileRead object creating
 		FileInputStream objFileStram = new FileInputStream(objFile);
 	    
@@ -403,7 +407,7 @@ public class Question2_TestClass {
 	}
 	
 	@Test(priority=8)
-	public void VerifyRememberMeIsChecked() throws Exception {
+	public void Q2_ModalLoginPage_VerifyRememberMeIsChecked() throws Exception {
 
 		//Set properties for chrome drivers
 		System.setProperty("webdriver.chrome.driver", ChromeDriverPath);
@@ -431,7 +435,7 @@ public class Question2_TestClass {
 	}
 	
 	@Test(priority=9)
-	public void VerifyRememberMeIsUnchecked() throws Exception {
+	public void Q2_ModalLoginPage_VerifyRememberMeIsUnchecked() throws Exception {
 		//FileRead object creating
 		FileInputStream objFileStram = new FileInputStream(objFile);
 	    
@@ -469,7 +473,7 @@ public class Question2_TestClass {
 		objWrkBook.close();		
 	}
 	@Test(priority=10)
-	public void VerifyForgotPassword() throws Exception {
+	public void Q2_ModalLoginPage_VerifyForgotPasswordLink() throws Exception {
 		//FileRead object creating
 		FileInputStream objFileStram = new FileInputStream(objFile);
 	    
@@ -495,7 +499,7 @@ public class Question2_TestClass {
 		driver.close();
 		objWrkBook.close();	
 				
-	}
+    }
 		
   
 }

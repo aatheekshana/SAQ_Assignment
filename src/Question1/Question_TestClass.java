@@ -14,7 +14,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
-import org.testng.annotations.Test;
+
 
 public class Question_TestClass {
  
@@ -28,7 +28,7 @@ public class Question_TestClass {
 	
 	
 	@Test(priority=-1)
-	public void loadLogin() throws Exception {
+	public void Q1_ResponsiveForm_PageLoading() throws Exception {
 		
 		System.setProperty("webdriver.chrome.driver", ChromeDriverPath);
 		driver = new ChromeDriver();
@@ -37,7 +37,7 @@ public class Question_TestClass {
 	}
 	
 	@Test(priority=1)
-	public void CheckDefaultCountryValue()throws Exception{
+	public void Q1_ResponsiveForm_CountryDDL_CheckDefaultValue()throws Exception{
 		//Set properties for chrome drivers
 		System.setProperty("webdriver.chrome.driver", ChromeDriverPath);
 		driver = new ChromeDriver();
@@ -60,7 +60,7 @@ public class Question_TestClass {
 	}
 	
 	@Test(priority=2)
-	public void FillAllData()throws Exception {
+	public void Q1_ResponsiveForm_SucessfullySubmitionWithAllData()throws Exception {
 		
 		//FileRead object creating
 				FileInputStream objFileStram = new FileInputStream(objFile);
@@ -135,7 +135,7 @@ public class Question_TestClass {
 	}
 	
 	@Test(priority=3)
-	public void EmptyFirstName()throws Exception {
+	public void Q1_ResponsiveForm_ErrorValidationForEmptyFirstName()throws Exception {
 		
 		//FileRead object creating
 				FileInputStream objFileStram = new FileInputStream(objFile);
@@ -236,7 +236,7 @@ public class Question_TestClass {
 	}
 	
 	@Test(priority=4)
-	public void EmptyLastName()throws Exception {
+	public void Q1_ResponsiveForm_ErrorValidationForEmptyLastName()throws Exception {
 		
 		//FileRead object creating
 				FileInputStream objFileStram = new FileInputStream(objFile);
@@ -338,7 +338,7 @@ public class Question_TestClass {
 	}
 	
 	@Test(priority=5)
-	public void EmptySubject()throws Exception {
+	public void Q1_ResponsiveForm_ErrorValidationForEmptySubject()throws Exception {
 		
 		//FileRead object creating
 				FileInputStream objFileStram = new FileInputStream(objFile);
@@ -447,7 +447,7 @@ public class Question_TestClass {
 	}
 	
 	@Test(priority=6)
-	public void MaxLengthFirstName()throws Exception {
+	public void Q1_ResponsiveForm_ErrorValidationForMaxLengthOfFirstName()throws Exception {
 		
 		//FileRead object creating
 				FileInputStream objFileStram = new FileInputStream(objFile);
@@ -501,7 +501,7 @@ public class Question_TestClass {
 	}
 	
 	@Test(priority=7)
-	public void MaxLengthLastName()throws Exception {
+	public void Q1_ResponsiveForm_ErrorValidationForMaxLengthOfLastName()throws Exception {
 		
 		//Purpose of this Testcase : Maximum length of last name is 20 and user should not be able to add more than 20 characters for last name. Verify the 
 		//proper validation is given when user try to give the lengthy text for last name
@@ -565,7 +565,7 @@ public class Question_TestClass {
 	}
 	
 	@Test(priority=8)
-	public void MaxLengthBoundryWithFirstName()throws Exception {
+	public void Q1_ResponsiveForm_VerifyMaxLengthBoundryWithFirstName()throws Exception {
 		
 		//Purpose of this Testcase : Maximum length of first name is 10 and maximum count (10) is validating in this test case
 		
@@ -623,7 +623,7 @@ public class Question_TestClass {
 	}
 	
 	@Test(priority=9)
-	public void MaxLengthBoundryWithLastName()throws Exception {
+	public void Q1_ResponsiveForm_VerifyMaxLengthBoundryWithLastName()throws Exception {
 		
 		//Purpose of this Testcase : Maximum length of last name is 20 and user should be able to add 20 characters for last name. Verify the 
 		//user able to add max count of characters in the last name field
@@ -688,7 +688,7 @@ public class Question_TestClass {
 	
 	
 	@Test(priority=10)
-	public void MaxLengthSubject()throws Exception {
+	public void Q1_ResponsiveForm_ErrorValidationForMaxLengthSubject()throws Exception {
 		
 		//FileRead object creating
 				FileInputStream objFileStram = new FileInputStream(objFile);
@@ -747,7 +747,7 @@ public class Question_TestClass {
 	}
 	
 	@Test(priority=10)
-	public void MaxLengthBoundryWithSubject()throws Exception {
+	public void Q1_ResponsiveForm_VerifyMaxLengthBoundryWithSubject()throws Exception {
 		
 		//FileRead object creating
 				FileInputStream objFileStram = new FileInputStream(objFile);
@@ -806,7 +806,7 @@ public class Question_TestClass {
 	}
 	
 	@Test(priority=11)
-	public void MultipleLineForSubject()throws Exception {
+	public void Q1_ResponsiveForm_VerifyUserAbleToAddMultipleLineForSubject()throws Exception {
 		
 		//FileRead object creating
 				FileInputStream objFileStram = new FileInputStream(objFile);
@@ -881,7 +881,7 @@ public class Question_TestClass {
 	}
 	
 	@Test(priority=12)
-	public void IncorrectFormatOfFirstName()throws Exception {
+	public void Q1_ResponsiveForm_ErrorValidationForIncorrectFormatOfFirstName()throws Exception {
 		
 		//FileRead object creating
 				FileInputStream objFileStram = new FileInputStream(objFile);
@@ -935,7 +935,7 @@ public class Question_TestClass {
 	}
 	
 	@Test(priority=13)
-	public void IncorrectFormatOfLastName()throws Exception {
+	public void Q1_ResponsiveForm_ErrorValidationForIncorrectFormatOfLastName()throws Exception {
 		
 		//FileRead object creating
 				FileInputStream objFileStram = new FileInputStream(objFile);

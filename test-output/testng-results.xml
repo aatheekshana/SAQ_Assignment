@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="21" total="22" passed="1">
+<testng-results skipped="0" failed="0" ignored="23" total="24" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="30349" started-at="2019-09-06T13:25:21Z" finished-at="2019-09-06T13:25:51Z">
+  <suite name="Default suite" duration-ms="30934" started-at="2019-09-07T16:37:57Z" finished-at="2019-09-07T16:38:28Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="30349" started-at="2019-09-06T13:25:21Z" finished-at="2019-09-06T13:25:51Z">
+    <test name="Default test" duration-ms="30934" started-at="2019-09-07T16:37:57Z" finished-at="2019-09-07T16:38:28Z">
       <class name="Question3.Question3_TestClass">
-        <test-method status="PASS" signature="MaxLength_NotExceded_UserName()[pri:21, instance:Question3.Question3_TestClass@59f99ea]" name="MaxLength_NotExceded_UserName" duration-ms="30311" started-at="2019-09-06T13:25:21Z" finished-at="2019-09-06T13:25:51Z">
+        <test-method status="PASS" signature="Q3_RegistrationForm_UserInfrorationPage_VerifyTheValiedUserName()[pri:22, instance:Question3.Question3_TestClass@59f99ea]" name="Q3_RegistrationForm_UserInfrorationPage_VerifyTheValiedUserName" duration-ms="30909" started-at="2019-09-07T16:37:57Z" finished-at="2019-09-07T16:38:28Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- MaxLength_NotExceded_UserName -->
+        </test-method> <!-- Q3_RegistrationForm_UserInfrorationPage_VerifyTheValiedUserName -->
       </class> <!-- Question3.Question3_TestClass -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
