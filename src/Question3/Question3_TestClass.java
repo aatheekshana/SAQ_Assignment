@@ -2,6 +2,7 @@ package Question3;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import org.apache.poi.xssf.usermodel.XSSFSheet;
@@ -22,7 +23,7 @@ public class Question3_TestClass {
 	File objFile = new File("D:\\Selenium Project\\AssignmentQuestion\\Assignment_Answers\\ExternalData\\QuestionTestData.xlsx");
 	
 	@Test(priority=1)
-	public void loadLogin() throws Exception {
+	public void Q3_RegistrationForm_PersonalDataPage_PageLoading() throws Exception {
 		
 		System.setProperty("webdriver.chrome.driver", ChromeDriverPath);
 		driver = new ChromeDriver();
@@ -35,7 +36,7 @@ public class Question3_TestClass {
 	}
 	
 	@Test(priority=2)
-	public void emptyFirstNameValidation() throws Exception {
+	public void Q3_RegistrationForm_PersonalDataPage_ErrorValidationForEmptyFirstName() throws Exception {
 		//FileRead object creating
 		FileInputStream objFileStram = new FileInputStream(objFile);
 			    
@@ -92,7 +93,7 @@ public class Question3_TestClass {
 	}
 	
 	@Test(priority=3)
-	public void emptyLastNameValidation() throws Exception {
+	public void Q3_RegistrationForm_PersonalDataPage_ErrorValidationForEmptyLastName() throws Exception {
 		//FileRead object creating
 		FileInputStream objFileStram = new FileInputStream(objFile);
 			    
@@ -148,7 +149,7 @@ public class Question3_TestClass {
 	}
 	
 	@Test(priority=4)
-	public void FirstNameLengthValidation() throws Exception {
+	public void Q3_RegistrationForm_PersonalDataPage_ErrorValidationForMaxLengthOfFirstName() throws Exception {
 		//FileRead object creating
 		FileInputStream objFileStram = new FileInputStream(objFile);
 			    
@@ -209,7 +210,7 @@ public class Question3_TestClass {
 	
 	
 	@Test(priority=5)
-	public void LastNameLengthValidation() throws Exception {
+	public void Q3_RegistrationForm_PersonalDataPage_ErrorValidationForMaxLengthOfLastName() throws Exception {
 		//FileRead object creating
 		FileInputStream objFileStram = new FileInputStream(objFile);
 			    
@@ -269,7 +270,7 @@ public class Question3_TestClass {
 	}
 	
 	@Test(priority=6)
-	public void invaliedFirstNameValidation() throws Exception {
+	public void Q3_RegistrationForm_PersonalDataPage_ErrorValidationForInvaliedFirstName() throws Exception {
 		//FileRead object creating
 		FileInputStream objFileStram = new FileInputStream(objFile);
 			    
@@ -329,7 +330,7 @@ public class Question3_TestClass {
 	}
 	
 	@Test(priority=7)
-	public void invaliedLastNameValidation() throws Exception {
+	public void Q3_RegistrationForm_PersonalDataPage_ErrorValidationForInvaliedLastName() throws Exception {
 		//FileRead object creating
 		FileInputStream objFileStram = new FileInputStream(objFile);
 			    
@@ -389,7 +390,7 @@ public class Question3_TestClass {
 	}
 	
 	@Test(priority=8)
-	public void LoadContactDetailsPage() throws Exception {
+	public void Q3_RegistrationForm_ContactDetailsPage_PageLoading() throws Exception {
 		//FileRead object creating
 		FileInputStream objFileStram = new FileInputStream(objFile);
 			    
@@ -434,7 +435,7 @@ public class Question3_TestClass {
 	}
 	
 	@Test(priority=9)
-	public void EmailAddressValidation_True() throws Exception {
+	public void Q3_RegistrationForm_ContactDetailsPage_VerifyTheValiedEmailAddress() throws Exception {
 		//FileRead object creating
 		FileInputStream objFileStram = new FileInputStream(objFile);
 			    
@@ -500,7 +501,7 @@ public class Question3_TestClass {
 	}
 	
 	@Test(priority=10)
-	public void EmailAddressValidation_False() throws Exception {
+	public void Q3_RegistrationForm_ContactDetailsPage_ErrorValidationForInvaliedEmailAddress() throws Exception {
 		//FileRead object creating
 		FileInputStream objFileStram = new FileInputStream(objFile);
 			    
@@ -564,7 +565,7 @@ public class Question3_TestClass {
 	}
 	
 	@Test(priority=11)
-	public void Empty_EmailAddress() throws Exception {
+	public void Q3_RegistrationForm_ContactDetailsPage_ErrorValidationForEmptyEmailAddress() throws Exception {
 		//FileRead object creating
 		FileInputStream objFileStram = new FileInputStream(objFile);
 			    
@@ -628,7 +629,7 @@ public class Question3_TestClass {
 				objWrkBook.close();
 	}
 	@Test(priority=12)
-	public void MobileNumberValidation() throws Exception {
+	public void Q3_RegistrationForm_ContactDetailsPage_VerifyTheValiedMobileNumber() throws Exception {
 		//FileRead object creating
 		FileInputStream objFileStram = new FileInputStream(objFile);
 			    
@@ -705,7 +706,7 @@ public class Question3_TestClass {
 	}
 	
 	@Test(priority=13)
-	public void MobileNumberValidation_False() throws Exception {
+	public void Q3_RegistrationForm_ContactDetailsPage_ErrorValidationForInvaliedMobileNumber() throws Exception {
 		//FileRead object creating
 		FileInputStream objFileStram = new FileInputStream(objFile);
 			    
@@ -782,7 +783,7 @@ public class Question3_TestClass {
 	}
 	
 	@Test(priority=14)
-	public void Empty_MobileNumber() throws Exception {
+	public void Q3_RegistrationForm_ContactDetailsPage_ErrorValidationForEmptyMobileNumber() throws Exception {
 		//FileRead object creating
 		FileInputStream objFileStram = new FileInputStream(objFile);
 			    
@@ -859,7 +860,7 @@ public class Question3_TestClass {
 	}
 	
 	@Test(priority=14)
-	public void AddAllContactData() throws Exception {
+	public void Q3_RegistrationForm_ContactDetailsPage_SucessfullyAddingContactData() throws Exception {
 		//FileRead object creating
 		FileInputStream objFileStram = new FileInputStream(objFile);
 			    
@@ -939,7 +940,7 @@ public class Question3_TestClass {
 	}
 	
 	@Test(priority=15)
-	public void EmptyData_Month_Year() throws Exception {
+	public void Q3_RegistrationForm_BirthDayPage_ErrorValidationForEmptyData_Month_Year() throws Exception {
 		//FileRead object creating
 		FileInputStream objFileStram = new FileInputStream(objFile);
 			    
@@ -1058,7 +1059,7 @@ public class Question3_TestClass {
 	}
 	
 	@Test(priority=16)
-	public void Invalid_Date_Month_Year() throws Exception {
+	public void Q3_RegistrationForm_BirthDayPage_ErrorValidationForInvalid_Date_Month_Year() throws Exception {
 		//FileRead object creating
 		FileInputStream objFileStram = new FileInputStream(objFile);
 			    
@@ -1177,7 +1178,7 @@ public class Question3_TestClass {
 	}
 	
 	@Test(priority=17)
-	public void ValidateYear() throws Exception {
+	public void Q3_RegistrationForm_BirthDayPage_ValidateYear() throws Exception {
 		//FileRead object creating
 		FileInputStream objFileStram = new FileInputStream(objFile);
 			    
@@ -1295,7 +1296,7 @@ public class Question3_TestClass {
 	}
 	
 	@Test(priority=18)
-	public void Load_CreateUserDetails() throws Exception {
+	public void Q3_RegistrationForm_UserInformtionPage_PageLoading() throws Exception {
 		//FileRead object creating
 		FileInputStream objFileStram = new FileInputStream(objFile);
 			    
@@ -1410,7 +1411,7 @@ public class Question3_TestClass {
 	}
 	
 	@Test(priority=20)
-	public void EmptyUserName() throws Exception {
+	public void Q3_RegistrationForm_UserInfrorationPage_ErrorValidataionForEmptyUserName() throws Exception {
 		//FileRead object creating
 		FileInputStream objFileStram = new FileInputStream(objFile);
 			    
@@ -1536,7 +1537,7 @@ public class Question3_TestClass {
 	}
 	
 	@Test(priority=21)
-	public void MaxLength_Exceded_UserName() throws Exception {
+	public void Q3_RegistrationForm_UserInfrorationPage_ErrorValidationForMaxLengthExcededUserName() throws Exception {
 		//FileRead object creating
 		FileInputStream objFileStram = new FileInputStream(objFile);
 			    
@@ -1668,7 +1669,7 @@ public class Question3_TestClass {
 	}
 	
 	@Test(priority=21)
-	public void MaxLength_NotExceded_UserName() throws Exception {
+	public void Q3_RegistrationForm_UserInfrorationPage_VerifyMaxLengthNotExcededUserName() throws Exception {
 		//FileRead object creating
 		FileInputStream objFileStram = new FileInputStream(objFile);
 			    
@@ -1790,6 +1791,282 @@ public class Question3_TestClass {
 					System.out.println("Sucessful user name :" + userName);
 					driver.findElement(By.xpath("//*[@id=\"regForm\"]/div[4]/p[1]/input")).sendKeys(userName);
 					}
+			        }catch(Exception e) {
+						missingData = "User Name is empty";
+						System.out.println(missingData);
+					}
+				
+				driver.close();
+				objWrkBook.close();
+	}
+	
+	@Test(priority=22)
+	public void Q3_RegistrationForm_UserInfrorationPage_ErrorValidationForInvaliedUserName() throws Exception {
+		//FileRead object creating
+		FileInputStream objFileStram = new FileInputStream(objFile);
+			    
+		//Create a execl workbook object
+		XSSFWorkbook objWrkBook = new XSSFWorkbook(objFileStram);
+				
+		//Select Sheet form execl
+		XSSFSheet objWrkBookSheet = objWrkBook.getSheetAt(2);
+		
+		System.setProperty("webdriver.chrome.driver", ChromeDriverPath);
+		driver = new ChromeDriver();
+		driver.get(bassurl);
+		Thread.sleep(4000);
+		
+		//Define variable
+		
+		String firstName = null;
+		String lastName = null;		
+				
+		       
+				firstName=objWrkBookSheet.getRow(22).getCell(0).getStringCellValue();
+				System.out.println(firstName);
+		     
+				lastName=objWrkBookSheet.getRow(22).getCell(1).getStringCellValue();
+				System.out.println(lastName);
+		       
+	
+		        driver.findElement(By.xpath("//*[@id=\"regForm\"]/div[1]/p[1]/input")).sendKeys(firstName);
+				Thread.sleep(1000);
+			
+
+				driver.findElement(By.xpath("//*[@id=\"regForm\"]/div[1]/p[2]/input")).sendKeys(lastName);
+				Thread.sleep(1000);
+
+				driver.findElement(By.xpath("//*[@id=\"regForm\"]/div[1]/p[3]/input[1]")).click();
+				Thread.sleep(2000);
+				
+				driver.findElement(By.xpath("//*[@id=\"nextBtn\"]")).click();
+				Thread.sleep(4000);
+				
+				//Validating email address format
+				
+				String email1 =null;
+				try {
+				email1= objWrkBookSheet.getRow(22).getCell(2).getStringCellValue();
+				driver.findElement(By.xpath("//*[@id=\"regForm\"]/div[2]/p[1]/input")).sendKeys(email1);
+				Thread.sleep(1000);
+				
+				String EMAIL_REGEX = "^[\\w-_\\.+]*[\\w-_\\.]\\@([\\w]+\\.)+[\\w]+[\\w]$";			      
+			      Boolean b = email1.matches(EMAIL_REGEX);
+			      }
+				catch (Exception e) {
+					System.out.println("Error massage : Email address is Empty");
+			     	}
+				
+					
+				String mobile =null;
+				
+				try {
+					mobile= objWrkBookSheet.getRow(22).getCell(3).getRawValue();
+				System.out.println(mobile);
+				driver.findElement(By.xpath("//*[@id=\"regForm\"]/div[2]/p[2]/input")).sendKeys(mobile);
+				Thread.sleep(1000);
+				Boolean ph = mobile.matches("\\d{9}");
+				}
+				catch (Exception e){
+					System.out.println("Error massage : Mobile nunber is Empty");
+				}
+			     	
+				
+				driver.findElement(By.xpath("//*[@id=\"nextBtn\"]")).click();
+				Thread.sleep(4000);
+				
+				String date=null;
+				String month=null;
+				String year=null;
+				
+				try {
+					date= objWrkBookSheet.getRow(22).getCell(4).getRawValue();
+				System.out.println(date);
+				driver.findElement(By.xpath("//*[@id=\"regForm\"]/div[3]/p[1]/input")).sendKeys(date);
+				Thread.sleep(1000);
+				}
+				catch (Exception e){
+					System.out.println("Error massage : Date is Empty");
+				}							
+				
+				try {
+					month= objWrkBookSheet.getRow(22).getCell(5).getRawValue();
+				System.out.println(date);
+				driver.findElement(By.xpath("//*[@id=\"regForm\"]/div[3]/p[2]/input")).sendKeys(month);
+				Thread.sleep(1000);
+				}
+				catch (Exception e){
+					System.out.println("Error massage : Month is Empty");
+				}
+				
+				try {
+					year= objWrkBookSheet.getRow(22).getCell(6).getRawValue();
+				System.out.println(year);
+				driver.findElement(By.xpath("//*[@id=\"regForm\"]/div[3]/p[3]/input")).sendKeys(year);
+				Thread.sleep(1000);
+				}
+				catch (Exception e){
+					System.out.println("Error massage : Month is Empty");
+				}	
+				
+				driver.findElement(By.xpath("//*[@id=\"nextBtn\"]")).click();
+				Thread.sleep(4000);
+				
+				String userName=null;
+				String missingData=null;
+				try {
+					userName=objWrkBookSheet.getRow(22).getCell(7).getStringCellValue();
+					System.out.println(userName);
+					Pattern pattern = Pattern.compile("^[a-z0-9_-]{3,15}$");
+					Matcher matcher = pattern.matcher(userName);
+				    boolean result = matcher.matches();
+				    System.out.println(result);
+				    
+				    if(result) {
+				    	System.out.println("Valide User Name");
+				    }else {
+				    	System.out.println("InValide User Name");
+				    }
+					
+					
+			        }catch(Exception e) {
+						missingData = "User Name is empty";
+						System.out.println(missingData);
+					}
+				
+				driver.close();
+				objWrkBook.close();
+	}
+	
+	@Test(priority=22)
+	public void Q3_RegistrationForm_UserInfrorationPage_VerifyTheValiedUserName() throws Exception {
+		//FileRead object creating
+		FileInputStream objFileStram = new FileInputStream(objFile);
+			    
+		//Create a execl workbook object
+		XSSFWorkbook objWrkBook = new XSSFWorkbook(objFileStram);
+				
+		//Select Sheet form execl
+		XSSFSheet objWrkBookSheet = objWrkBook.getSheetAt(2);
+		
+		System.setProperty("webdriver.chrome.driver", ChromeDriverPath);
+		driver = new ChromeDriver();
+		driver.get(bassurl);
+		Thread.sleep(4000);
+		
+		//Define variable
+		
+		String firstName = null;
+		String lastName = null;		
+				
+		       
+				firstName=objWrkBookSheet.getRow(23).getCell(0).getStringCellValue();
+				System.out.println(firstName);
+		     
+				lastName=objWrkBookSheet.getRow(23).getCell(1).getStringCellValue();
+				System.out.println(lastName);
+		       
+	
+		        driver.findElement(By.xpath("//*[@id=\"regForm\"]/div[1]/p[1]/input")).sendKeys(firstName);
+				Thread.sleep(1000);
+			
+
+				driver.findElement(By.xpath("//*[@id=\"regForm\"]/div[1]/p[2]/input")).sendKeys(lastName);
+				Thread.sleep(1000);
+
+				driver.findElement(By.xpath("//*[@id=\"regForm\"]/div[1]/p[3]/input[1]")).click();
+				Thread.sleep(2000);
+				
+				driver.findElement(By.xpath("//*[@id=\"nextBtn\"]")).click();
+				Thread.sleep(4000);
+				
+				//Validating email address format
+				
+				String email1 =null;
+				try {
+				email1= objWrkBookSheet.getRow(23).getCell(2).getStringCellValue();
+				driver.findElement(By.xpath("//*[@id=\"regForm\"]/div[2]/p[1]/input")).sendKeys(email1);
+				Thread.sleep(1000);
+				
+				String EMAIL_REGEX = "^[\\w-_\\.+]*[\\w-_\\.]\\@([\\w]+\\.)+[\\w]+[\\w]$";			      
+			      Boolean b = email1.matches(EMAIL_REGEX);
+			      }
+				catch (Exception e) {
+					System.out.println("Error massage : Email address is Empty");
+			     	}
+				
+					
+				String mobile =null;
+				
+				try {
+					mobile= objWrkBookSheet.getRow(23).getCell(3).getRawValue();
+				System.out.println(mobile);
+				driver.findElement(By.xpath("//*[@id=\"regForm\"]/div[2]/p[2]/input")).sendKeys(mobile);
+				Thread.sleep(1000);
+				Boolean ph = mobile.matches("\\d{9}");
+				}
+				catch (Exception e){
+					System.out.println("Error massage : Mobile nunber is Empty");
+				}
+			     	
+				
+				driver.findElement(By.xpath("//*[@id=\"nextBtn\"]")).click();
+				Thread.sleep(4000);
+				
+				String date=null;
+				String month=null;
+				String year=null;
+				
+				try {
+					date= objWrkBookSheet.getRow(23).getCell(4).getRawValue();
+				System.out.println(date);
+				driver.findElement(By.xpath("//*[@id=\"regForm\"]/div[3]/p[1]/input")).sendKeys(date);
+				Thread.sleep(1000);
+				}
+				catch (Exception e){
+					System.out.println("Error massage : Date is Empty");
+				}							
+				
+				try {
+					month= objWrkBookSheet.getRow(23).getCell(5).getRawValue();
+				System.out.println(date);
+				driver.findElement(By.xpath("//*[@id=\"regForm\"]/div[3]/p[2]/input")).sendKeys(month);
+				Thread.sleep(1000);
+				}
+				catch (Exception e){
+					System.out.println("Error massage : Month is Empty");
+				}
+				
+				try {
+					year= objWrkBookSheet.getRow(23).getCell(6).getRawValue();
+				System.out.println(year);
+				driver.findElement(By.xpath("//*[@id=\"regForm\"]/div[3]/p[3]/input")).sendKeys(year);
+				Thread.sleep(1000);
+				}
+				catch (Exception e){
+					System.out.println("Error massage : Month is Empty");
+				}	
+				
+				driver.findElement(By.xpath("//*[@id=\"nextBtn\"]")).click();
+				Thread.sleep(4000);
+				
+				String userName=null;
+				String missingData=null;
+				try {
+					userName=objWrkBookSheet.getRow(23).getCell(7).getStringCellValue();
+					System.out.println(userName);
+					Pattern pattern = Pattern.compile("^[a-z0-9_-]{3,15}$");
+					Matcher matcher = pattern.matcher(userName);
+				    boolean result = matcher.matches();
+				    System.out.println(result);
+				    
+				    if(result) {
+				    	System.out.println("Valide User Name");
+				    }else {
+				    	System.out.println("InValide User Name");
+				    }
+					
+					
 			        }catch(Exception e) {
 						missingData = "User Name is empty";
 						System.out.println(missingData);
