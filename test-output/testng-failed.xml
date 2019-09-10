@@ -5,7 +5,7 @@
     <classes>
       <class name="Question3.Question3_TestClass">
         <methods>
-          <include name="MaxLength_NotExceded_UserName"/>
+          <include name="Q3_RegistrationForm_UserInfrorationPage_VerifyPasswordValidation"/>
         </methods>
       </class> <!-- Question3.Question3_TestClass -->
     </classes>
